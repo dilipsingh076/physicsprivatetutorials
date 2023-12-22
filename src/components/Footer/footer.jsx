@@ -1,15 +1,14 @@
-import Box from '@/components/atoms/box'
-import Typography from '@/components/atoms/typography'
-import Image from '@/components/atoms/image'
-import Link from 'next/link'
+// import Box from '../atoms/box'
+// import Typography from '../atoms/typography'
 import React from 'react'
-import { Divider } from '@mui/material'
+import { Divider,Typography,Box } from '@mui/material'
+import EmailForm from '../Email/EmailForm'
 
 const Footer = () => {
   return (
     <Box
       sx={{
-        // border: '1px solid red',
+        border: '1px solid red',
         width: "100%",
         bgcolor: "#dde9ff",
         color: "#2D2D2Dck",
@@ -79,7 +78,7 @@ const Footer = () => {
                 // color: "#fff",
               }}
             >
-              Bulevar Zorana Dindic 125 Belgrade Serbia
+             15A, Nand Prem, behing Parle Book Depot, Nehru Road, Opp. HDFC bank, Vile Parle East.
             </Typography>
 
             <Typography
@@ -90,7 +89,7 @@ const Footer = () => {
                 mt: { xs: "0px", sm: "8px" },
               }}
             >
-              +908 89097 890
+              +91 9773499614
             </Typography>
             <Typography
               sx={{
@@ -290,6 +289,10 @@ const Footer = () => {
           }}
         >
           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3770.2057461745094!2d72.8422987734602!3d19.098627851265206!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c9b14e318aa3%3A0xa42da1932d336ae0!2sVile%20Parle%20Station%20(E)!5e0!3m2!1sen!2sin!4v1702794165334!5m2!1sen!2sin" width="800" height="250" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </Box>
+        {/* fifth columns */}
+        <Box>
+          <EmailForm/>
         </Box>
       </Box>
       {/* bottom footer which have copyright content. */}
