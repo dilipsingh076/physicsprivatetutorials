@@ -1,15 +1,16 @@
  
 import './App.css'
 import CombineRouter from './Routes/CombineRouter'
-// import Footer from './components/Footer/footer'
+import MyFooter from './components/Footer/MyFooter'
+import Navbar from './components/Navbar/Navbar'
 
 function App() {
- 
-
+  
   return (
     <>
+    <Navbar/>
       <CombineRouter/>
-      {/* <Footer/> */}
+       <MyFooter/>
     </>
   )
 }
