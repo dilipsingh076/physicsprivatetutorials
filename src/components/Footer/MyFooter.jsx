@@ -1,14 +1,17 @@
  import { Box, Divider, Typography } from '@mui/material'
 import React from 'react'
+import { brandLogo } from '../../utils'
  
  const MyFooter = () => {
    return (
      <>
         <Box
       sx={{
-        // border: '1px solid red',
+        
+        paddingTop:"20px",
         width: "100%",
         bgcolor: "#dde9ff",
+        boxSizing:"border-box",
         color: "#2D2D2Dck",
         clipPath: "ellipse(99% 100% at center bottom)",
       }}
@@ -17,13 +20,18 @@ import React from 'react'
         className={'flex justify-center'}
         sx={{
           width: "100%",
+          mt:"30px",
+          display:"flex",
+          justifyContent:"center",
+          alignItems:"center"
         }}
       >
+        <img src={brandLogo} style={{width:"150px" , height:"50px",marginBottom:"20px"}} alt="" />
         {/* <Link href={"/"} >
-          <Image src="/physicslogo01.png" alt="Brand Logo" width={150} height={60} />
+          <img src={brandLogo} alt="Brand Logo" width={150} height={60} />
         </Link> */}
       </Box>
-      <Divider  sx={{ color: 'gray', width: '90%', }} />
+      <Divider sx={{background:"gray" ,width:"95%",m:"auto",height:"0.3px"}}/>
       <Box
         sx={{
           // border:'1px solid blue',
@@ -34,13 +42,15 @@ import React from 'react'
           alignItems: "center",
           margin: "auto",
           width: { xs: "95%", md: "97%" },
+       
           // p: { xs: "10px 0px", sm: "30px 0px" },
         }}
       >
+
         {/* first section start from here. */}
         <Box
           sx={{
-            // border:'1px solid red',
+           
             width: { xs: "100%", md: "22%" },
             height: '90%',
           }}
@@ -49,7 +59,7 @@ import React from 'react'
             <Typography
               sx={{
                 fontFamily: "Montserrat",
-                fontSize: { xs: "13px", md: "17px" },
+                fontSize: { xs: "15px", sm: "16px" },
                 textAlign: "left",
                 mt: "30px",
               }}
@@ -62,7 +72,7 @@ import React from 'react'
             <Typography
               sx={{
                 fontFamily: "Montserrat",
-                fontSize: { xs: "13px", md: "17px" },
+                fontSize: { xs: "15px", sm: "16px" },
                 textAlign: "left",
                 mt: "10px",
               }}
@@ -86,7 +96,7 @@ import React from 'react'
           <Typography
             sx={{
               fontFamily: "Montserrat",
-              fontSize: { xs: "20px", sm: "25px" },
+              fontSize: { xs: "14px", sm: "20px" },
               // textAlign: { xs: "center", md: "start" },
               fontWeight: 500,
               mt: "30px",
@@ -112,7 +122,7 @@ import React from 'react'
           <Typography
             sx={{
               fontFamily: "Montserrat",
-              fontSize: { xs: "15px", sm: "18px" },
+              fontSize: { xs: "15px", sm: "16px" },
               textAlign: { xs: "center", md: "left" },
               mt: { xs: "5px", md: "4px" },
               // color:"#ffff"
@@ -126,7 +136,7 @@ import React from 'react'
           <Typography
             sx={{
               fontFamily: "Montserrat",
-              fontSize: { xs: "15px", sm: "18px" },
+              fontSize: { xs: "15px", sm: "16px" },
               textAlign: { xs: "center", md: "left" },
               // color:"#fff"
             }}
@@ -138,7 +148,7 @@ import React from 'react'
           <Typography
             sx={{
               fontFamily: "Montserrat",
-              fontSize: { xs: "15px", md: "18px" },
+              fontSize: { xs: "15px", sm: "16px" },
               textAlign: { xs: "center", md: "left" },
             }}
           >
@@ -149,7 +159,7 @@ import React from 'react'
           <Typography
             sx={{
               fontFamily: "Montserrat",
-              fontSize: { xs: "15px", md: "18px" },
+              fontSize: { xs: "15px", sm: "16px" },
               textAlign: { xs: "center", md: "left" },
             }}
           >
@@ -181,7 +191,7 @@ import React from 'react'
           <Typography
             sx={{
               fontFamily: "Montserrat",
-              fontSize: { xs: "20px", sm: "25px" },
+              fontSize: { xs: "14px", sm: "20px" },
               textAlign: { xs: "center", md: "start" },
               fontWeight: 500,
               // color: "#fff",
@@ -194,7 +204,7 @@ import React from 'react'
             <Typography
               sx={{
                 fontFamily: "Montserrat",
-                fontSize: { xs: "15px", sm: "18px" },
+                fontSize: { xs: "15px", sm: "16px" },
                 textAlign: { xs: "center", md: "start" },
                 mt: { xs: "0px", md: "10px" },
                 lineHeight: "120%",
@@ -207,7 +217,7 @@ import React from 'react'
             <Typography
               sx={{
                 fontFamily: "Montserrat",
-                fontSize: { xs: "16px", md: "18px" },
+                fontSize: { xs: "15px", sm: "16px" },
                 textAlign: { xs: "center", md: "start" },
                 mt: { xs: "0px", sm: "8px" },
               }}
@@ -217,7 +227,7 @@ import React from 'react'
             <Typography
               sx={{
                 fontFamily: "Montserrat",
-                fontSize: { xs: "16px", md: "18px" },
+                fontSize: { xs: "15px", sm: "16px" },
                 textAlign: { xs: "center", md: "start" },
                 mt: { xs: "0px", md: "7px" },
                 // color: "#fff",
@@ -316,9 +326,9 @@ import React from 'react'
           sx={{
             width: {
               xs: "70%",
-              md: "20%",
+              md: "35%",
               margin: "auto",
-
+boxShadow:"rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;",
               display: "flex",
               justifyContent: "end",
             },

@@ -10,12 +10,15 @@ import {
 } from "@mui/material";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import ResponsiveNav from "./ResponsiveNav ";
+import { brandLogo } from "../../utils";
 // import logo from "../../Utils/Logo/Logo.png";
 // import logoframe from "../../Utils/Logo/Homenavfram.png";
 // import normalmenue from "../../Utils/Logo/restmenu.png";
 // import activemenue from "../../Utils/Logo/activemenu.png";
 // import { imgsize } from "../../Styles/CommonStyles";
-// import reslogo from "../../Utils/Logo/Logo.png";
+ 
+import MenuIcon from '@mui/icons-material/Menu';
+import MenuOpenIcon from '@mui/icons-material/MenuOpen';
 const Navbar = () => {
   let location = useLocation().pathname;
 
@@ -67,19 +70,16 @@ const Navbar = () => {
       link: "/",
     },
     {
-      Title: "Features",
-      link: "/Features",
+      Title: "About",
+      link: "/about",
+    },
+    {
+      Title: "Careers",
     },
     {
       Title: "Blog",
     },
-    {
-      Title: "shop",
-    },
-    {
-      Title: "About",
-      link: "/about",
-    },
+  
     {
       Title: "Contact us",
       link: "/contact",
@@ -101,7 +101,8 @@ const Navbar = () => {
             background: "#fff",
             boxSizing: "border-box",
             boxShadow: "none",
-           
+            width:"100%",
+            boxShadow:"rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;"
           }}
         >
           <Toolbar>
@@ -109,25 +110,27 @@ const Navbar = () => {
             <Box
               sx={{
                 display: "flex",
-                justifyContent: "space-between",
+                justifyContent:"space-around",
                 width: "100vw",
                 alignItems: "center",
                 margin: "auto",
-                height: "70px",
                 boxSizing: "border-box",
+                padding:"10px",
+             
+              
               }}
             >
               <Box sx={{ display: { xs: "none", md: "block" } }}>
                 <Link to={"/"}>
-                  <Box sx={{ width: { xs: "250px", md: "350px" } }}>
-                    {/* <img src={logoframe} style={{ ...imgsize }} alt="" /> */}
+                  <Box sx={{ width: { xs: "250px", md: "140px" } }}>
+                      <img src={brandLogo} style={{ width:"100%",height:"100%"}} alt="" />  
                   </Box>
                 </Link>
               </Box>
               <Box sx={{ display: { xs: "block", md: "none" } }}>
                 <Link to={"/"}>
-                  <Box sx={{ width: { xs: "100%" }, height: "30px" }}>
-                    {/* <img src={logoframe} style={{ ...imgsize }} alt="" /> */}
+                  <Box sx={{width: { xs: "100px", md: "200px" }, height: "30px" }}>
+                  <img src={brandLogo} style={{ width:"100%",height:"100%"}} alt="" /> 
                   </Box>
                 </Link>
               </Box>
@@ -137,18 +140,18 @@ const Navbar = () => {
                 sx={{
                   display: { xs: "none", md: "flex" },
                   justifyContent: "space-between",
-                  width: "62%",
+                  width: "72%",
                   boxSizing: "border-box",
                 }}
               >
                 <Box
                   sx={{
                     display: "flex",
-                    gap: "14px",
                     justifyContent: "space-between",
                     alignItems: "center",
-                    width: "68%",
+                    width: "58%",
                     boxSizing: "border-box",
+                    // border:"solid red"
                   }}
                 >
                   {Tabs?.map((el) => (
@@ -158,9 +161,11 @@ const Navbar = () => {
                             color:"#000",
                           fontSize: "15px",
                           fontWeight: location == el.link ? "800" : "400",
+                          color: location == el.link ? "#063995" : "#000",
                           cursor: "pointer",
                           fontFamily: "Montserrat",
                           lineHeight: "120%",
+                          letterSpacing:"0.6px"
                         }}
                       >
                         {el.Title}
@@ -181,11 +186,8 @@ const Navbar = () => {
                     height: { xs: "15px", sm: "25px" },
                   }}
                 >
-                  {/* <img
-                    style={{ ...imgsize }}
-                    src={state[anchor] ? activemenue : normalmenue}
-                    alt="menu"
-                  /> */}
+              {state[anchor] ?  <MenuOpenIcon  sx={{color:"#000",cursor:"pointer"}}/> :<MenuIcon  sx={{color:"#000",cursor:"pointer"}} />}
+              
                 </Box>
               </Box>
             </Box>

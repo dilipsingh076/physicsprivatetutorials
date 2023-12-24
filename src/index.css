@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Montserrat&family=Poppins&family=Raleway&display=swap');
+body{
+    font-family: 'Raleway', sans-serif;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+   
+  
+  }
+  
+
+/* Modify the width of the scrollbar thumb */
+::-webkit-scrollbar-thumb {
+  width: 6px; /* Adjust the width as needed */
+  background-color: #063995; /* Change the color to match your design */
+}
+
+/* Optionally, you can change the background color of the scrollbar track */
+::-webkit-scrollbar {
+  width: 8px; /* Adjust the width as needed */
+  background-color: #f1f1f1; /* Change the color to match your design */
+}

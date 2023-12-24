@@ -11,7 +11,7 @@ const Contactform = () => {
       <TextField sx={{width:"40%"}} id="standard-basic1" label="Last Name" variant="standard" />
 
         </Box>
-        <Box  sx={{display:"flex",width:"100%",justifyContent:"space-between"}}>
+        <Box  sx={{display:"flex",width:"100%",justifyContent:"space-between",flexWrap:"wrap"}}>
 
         <TextField sx={{width:"40%"}} id="standard-basic" label="Email" variant="standard" />
       <TextField sx={{width:"40%"}} id="standard-basic1" label="Phone Number" variant="standard" />

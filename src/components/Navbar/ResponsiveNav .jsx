@@ -3,6 +3,7 @@ import Drawer from "@mui/material/Drawer";
 import Button from "@mui/material/Button";
 import { Box, Divider, Typography } from "@mui/material";
 import { Link, useLocation } from "react-router-dom";
+import { brandLogo } from "../../utils";
 // import logoicon from "../../Utils/Logo/Logo.png";
 // import { imgsize } from "../../Styles/CommonStyles";
 const ResponsiveNav = ({ anchor, Tabs, state, toggleDrawer }) => {
@@ -12,9 +13,8 @@ const ResponsiveNav = ({ anchor, Tabs, state, toggleDrawer }) => {
       <Drawer anchor="left" open={state[anchor]} onClose={toggleDrawer(false)}>
         {/* Your drawer content goes here */}
         <Box
-          style={{
-            width: "70vw",
-            background: "#08346D ",
+          sx={{
+            width: "40vw",
             position: "relative",
           }}
         >
@@ -23,11 +23,11 @@ const ResponsiveNav = ({ anchor, Tabs, state, toggleDrawer }) => {
               position: "absolute",
               top: "7%",
               left: "10%",
-              width: "40px",
+              width: "120px",
               height: "40px",
             }}
           >
-            {/* <img src={logoicon} style={{ ...imgsize }} alt="logoicon" /> */}
+            <img src={brandLogo} style={{ width:"100%",height:"100%" }} alt="logoicon" />
           </Box>
           <Box
             sx={{
@@ -43,7 +43,7 @@ const ResponsiveNav = ({ anchor, Tabs, state, toggleDrawer }) => {
             <Box
               sx={{
                 height: "50vh",
-                background: "#08346D ",
+      
                 display: "flex",
                 flexDirection: "column",
                 justifyContent: "space-between",
@@ -69,7 +69,8 @@ const ResponsiveNav = ({ anchor, Tabs, state, toggleDrawer }) => {
                         width: "100%",
                         textAlign: "start",
                         fontSize: location == el.link ? "20px" : "16px",
-                        color: "#fff",
+                        color: location == el.link ? "#063995" : "#000",
+                        
                         fontWeight: location == el.link ? 800 : 100,
                         fontFamily: "Montserrat",
                       }}
@@ -80,7 +81,7 @@ const ResponsiveNav = ({ anchor, Tabs, state, toggleDrawer }) => {
                   {/* <Divider sx={{background:"black",mt:"10px",width:"100%"}}/> */}
                 </Box>
               ))}
-              <Link to={"/signup"} style={{ width: "100%" }}>
+              {/* <Link to={"/signup"} style={{ width: "100%" }}>
                 <Button
                   sx={{
                     padding: "7px 0px",
@@ -100,9 +101,9 @@ const ResponsiveNav = ({ anchor, Tabs, state, toggleDrawer }) => {
                 >
                   Login
                 </Button>
-              </Link>
+              </Link> */}
 
-              <Link to={"/signup"} style={{ width: "100%" }}>
+              {/* <Link to={"/signup"} style={{ width: "100%" }}>
                 <Button
                   sx={{
                     padding: "7px 0px",
@@ -121,7 +122,7 @@ const ResponsiveNav = ({ anchor, Tabs, state, toggleDrawer }) => {
                 >
                   Signup
                 </Button>
-              </Link>
+              </Link> */}
             </Box>
           </Box>
         </Box>
