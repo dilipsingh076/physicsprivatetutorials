@@ -3,11 +3,13 @@ import facebookLogo from './facebooklogo.png';
 import homeModel from './homeModel.png';
 import whatsappLogo from './whatsapplogo.png';
 import bigellise from './ellipsebig.png';
+import PlayButton from './PolygonPlay.png';
  
 export {
   facebookLogo,
   brandLogo,
   whatsappLogo,
   homeModel,
-  bigellise
+  bigellise,
+  PlayButton
 };
