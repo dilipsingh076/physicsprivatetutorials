@@ -69,8 +69,8 @@ const Contact = () => {
               gap: "40px",
             }}
           >
-            <Typography sx={{ fontSize: "14px" }}> +1012 3456 789</Typography>
-            <Typography sx={{ fontSize: "14px" }}> demo@gmail.com</Typography>
+            <Typography sx={{ fontSize: "14px" }}> +91 9773499614</Typography>
+            <Typography sx={{ fontSize: "14px" }}> physicsprivatetuotrials@gmail.com</Typography>
             <Typography sx={{ fontSize: "14px" }}>
               15A Nand Prem, behind Parle Book Depot, Nehru Road, Opp. HDFC
               bank, Vile Parle East.
