@@ -4,6 +4,8 @@ import homeModel from './homeModel.png';
 import whatsappLogo from './whatsapplogo.png';
 import bigellise from './ellipsebig.png';
 import PlayButton from './PolygonPlay.png';
+import Vector1 from './Vector1.png'
+import Course1 from './course1.png'
  
 export {
   facebookLogo,
@@ -11,5 +13,7 @@ export {
   whatsappLogo,
   homeModel,
   bigellise,
-  PlayButton
+  PlayButton,
+  Vector1,
+  Course1
 };
