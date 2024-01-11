@@ -346,7 +346,6 @@ const MyFooter = () => {
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
-            alignItems: 'center', 
             background: '#dd5c7a',
             width: '100%'
           }}

@@ -1,11 +1,49 @@
-import { Box, Container, Typography } from "@mui/material";
-import React from "react";
-
+import { Box, Button, Container, Typography } from "@mui/material";
 import aboutimage from "../assets/aboutimag.png";
 import Bluebtn from "../components/Buttons/Bluebtn";
 import Infocard from "../components/AboutCompo/Infocard";
 import frame1 from "../utils/1frame.png";
 import teacherimg from "../utils/teacherimg.png"
+import { textContent1, textContent2, textContent3 } from '../components/TextContent/TextContent';
+import { useState } from "react";
+
+
+
+const TruncatedText = ({ text, maxLength }) => {
+  const [isExpanded, setIsExpanded] = useState(false);
+  const truncatedText = isExpanded ? text : `${text.slice(0, maxLength)}...`;
+
+  return (
+    <Typography
+      sx={{
+        fontFamily: "Source Serif",
+        fontSize: "16px",
+        fontWeight: "500",
+        cursor: 'pointer',
+      }}
+      onClick={() => setIsExpanded(!isExpanded)}
+    >
+      {truncatedText}
+      <Button
+        variant="text"
+        color="primary"
+        onClick={() => setIsExpanded(!isExpanded)}
+        sx={{ textTransform: 'none' }}
+      >
+        {isExpanded ? 'Show Less' : 'See More'}
+      </Button>
+    </Typography>
+  );
+};
+
+
+
+
+
+
+
+
+
 const About = () => {
   return (
     <>
@@ -52,13 +90,11 @@ const About = () => {
               fontSize: "18px",
             }}
           >
-            From preschool to pre-tertiary, our students enjoy fun, interactive
-            and relevant lessons and are empowered to think beyond the confines
-            of the classroom.
+            PHYSICS PRIVATE TUTORIALS is your destination that offers expert coaching for 11th, 12th, JEE and NEET apirant.
           </Typography>
-          <Box sx={{ width: "20%" }}>
+          {/* <Box sx={{ width: "20%" }}>
             <Bluebtn Buttontitle={"See More"} />
-          </Box>
+          </Box> */}
         </Box>
       </Box>
 
@@ -102,7 +138,7 @@ const About = () => {
           <Infocard
             data={{
               title: "Developing Confident and Successful Learners",
-              desc: "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut al Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut al",
+              desc: "Founded by the education expert with decades of experience Prof. Rashmi B Choudhary, M.S.C Physics by Research (Mumbai) Physics Private Tutorials help our studends to achive their objectives in an enlightening enviourment filled with enerygy.",
             }}
           />
         </Box>
@@ -111,7 +147,7 @@ const About = () => {
             data={{
               position: "left",
               title: "Enjoy Learning with a Unique Classroom Experience",
-              desc: "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut al Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut al",
+              desc: "We provide step to step interaction with our students while they toward their goal.",
             }}
           />
         </Box>
@@ -120,7 +156,33 @@ const About = () => {
           <Infocard
             data={{
               title: "Passionate Teachers That Make a Difference",
-              desc: "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut al Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut al",
+              desc: "We ensure great result oriented teaching with dedicated learning enviourment",
+            }}
+          />
+        </Box>
+        <Box>
+          <Infocard
+            data={{
+              position: "left",
+              title: "Empowering Futures: A Pledge to Personal and Professional Growth",
+              desc: "we Provide Strong commitment for carrer objective presonal and professional developement.",
+            }}
+          />
+        </Box>
+        <Box>
+          <Infocard
+            data={{
+              title: "Elevating Success Across Boards and Competitive Exams",
+              desc: "Physics Private Tutorials provide a complete coaching for all boards [H.S.C, CBSE, I.S.C] along with board the incited do complete prepration for MHT-CET, JEE, Mains/Advance, NEET, BITS, NIT, IIT etc.",
+            }}
+          />
+        </Box>
+        <Box>
+          <Infocard
+            data={{
+              position: "left",
+              title: "Customized Learning Journey",
+              desc: "We have special doubt leacture in small group regular test as per the student. We have regular counsellinge session for the better met of student.",
             }}
           />
         </Box>
@@ -248,16 +310,16 @@ const About = () => {
             >
               Personalized learning
             </Typography>
-            <Typography
+            <TruncatedText text={textContent1} maxLength={100} />
+            {/* <Typography
               sx={{
                 fontFamily: "Source Serif",
                 fontSize: "16px",
                 fontWeight: "500",
               }}
             >
-              Students practice at their own pace, first filling in gaps in
-              their understanding and then accelerating their learning.
-            </Typography>
+              Personalized learning tailors education to individual students, considering their unique needs and preferences. Emphasizing flexibility, this approach allows learners to progress at their own pace, fostering a deeper understanding of concepts. Utilizing adaptive technologies, it offers targeted support and engages students through diverse resources, collaborative activities, and project-based assessments. Teachers become facilitators, guiding goal-setting and providing timely feedback. Regular assessments and data analytics enable educators to track progress, optimizing the learning experience.
+            </Typography> */}
           </Box>
 
           <Box
@@ -283,18 +345,18 @@ const About = () => {
                 fontWeight: "600",
               }}
             >
-              Personalized learning
+              Unlocking Potential
             </Typography>
-            <Typography
+            <TruncatedText text={textContent2} maxLength={100} />
+            {/* <Typography
               sx={{
                 fontFamily: "Source Serif",
                 fontSize: "16px",
                 fontWeight: "500",
               }}
             >
-              Students practice at their own pace, first filling in gaps in
-              their understanding and then accelerating their learning.
-            </Typography>
+             Unlocking Potential encapsulates the transformative power of personalized learning, wherein education becomes a dynamic and tailored experience. This approach acknowledges individual learning styles and paces, allowing students to delve into subjects deeply and at their own rhythm. By employing adaptive technologies and varied resources, it provides targeted support, fostering a comprehensive understanding of concepts. Teachers pivot from traditional roles to mentors, guiding students in goal-setting and offering constructive feedback. Regular assessments and data-driven insights ensure continual optimization of the learning journey, unlocking the full potential of each student and cultivating a lifelong love for learning. Unlocking Potential is the key to personalized educational excellence.
+            </Typography> */}
           </Box>
 
           <Box
@@ -320,18 +382,18 @@ const About = () => {
                 fontWeight: "600",
               }}
             >
-              Personalized learning
+              Tailored Education
             </Typography>
-            <Typography
+            <TruncatedText text={textContent3} maxLength={100} />
+            {/* <Typography
               sx={{
                 fontFamily: "Source Serif",
                 fontSize: "16px",
                 fontWeight: "500",
               }}
             >
-              Students practice at their own pace, first filling in gaps in
-              their understanding and then accelerating their learning.
-            </Typography>
+              Tailored Education epitomizes a student-centric paradigm, offering a bespoke learning experience that adapts to individual needs and preferences. This approach goes beyond conventional teaching methods, recognizing diverse learning styles and accommodating varied paces of comprehension. By leveraging adaptive technologies and a spectrum of resources, it crafts a curriculum that resonates with each learner, fostering a deeper and more personalized understanding of subjects. Teachers evolve into mentors, guiding students through personalized pathways and providing constructive feedback. Regular assessments and data-driven insights fine-tune the educational journey, ensuring that Tailored Education not only meets academic needs but also nurtures holistic development, equipping students for a successful and fulfilling future.
+            </Typography> */}
           </Box>
         </Box>
       </Container>

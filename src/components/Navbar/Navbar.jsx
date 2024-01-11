@@ -159,7 +159,6 @@ const Navbar = () => {
                     <Link to={el.link} style={{ textDecoration: "none" }}>
                       <Typography
                         sx={{
-                            color:"#000",
                           fontSize: "15px",
                           fontWeight: location == el.link ? "800" : "400",
                           color: location == el.link ? "#063995" : "#000",
