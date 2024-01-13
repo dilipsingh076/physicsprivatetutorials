@@ -6,6 +6,7 @@ import bigellise from './ellipsebig.png';
 import PlayButton from './PolygonPlay.png';
 import Vector1 from './Vector1.png'
 import Course1 from './course1.png'
+import zigzag from './zigzag.svg'
  
 export {
   facebookLogo,
@@ -15,5 +16,6 @@ export {
   bigellise,
   PlayButton,
   Vector1,
-  Course1
+  Course1,
+  zigzag
 };
