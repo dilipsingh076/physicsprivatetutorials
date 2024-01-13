@@ -74,12 +74,9 @@ const Navbar = () => {
       link: "/about",
     },
     {
-      Title: "Careers",
+      Title: "Courses",
+      link: "/courses",
     },
-    {
-      Title: "Blog",
-    },
-  
     {
       Title: "Contact us",
       link: "/contact",
