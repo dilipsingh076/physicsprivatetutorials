@@ -2,6 +2,7 @@ import { Box, Divider, TextField, Typography,Button, Snackbar, Alert } from '@mu
 import React, { useRef, useState } from 'react'
 import { brandLogo, facebookLogo, whatsappLogo } from '../../utils'
 import emailjs from '@emailjs/browser';
+import { Link } from 'react-router-dom';
 
 const MyFooter = () => {
   const [email, setEmail] = useState('');
@@ -27,7 +28,7 @@ const MyFooter = () => {
     // You can customize the email service and template ID based on your Email.js setup
     const emailService = 'service_z5bonw9';
     const templateId = 'template_xvmr7wk';
-    
+
     // Send email using Email.js
     emailjs.send(emailService, templateId, { from_name: email },'tISMwdyPc9SBQJVoU')
       .then((response) => {
@@ -40,6 +41,13 @@ const MyFooter = () => {
         console.error('Error sending email:', error);
         // Handle errors or show a message to the user
       });
+  };
+
+  const openWhatsApp = () => {
+    const phoneNumber = '9773499614';
+    const message = 'Hello, I want to chat with you!';
+    const whatsappLink = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+    window.location.href = whatsappLink;
   };
   return (
     <>
@@ -94,7 +102,6 @@ const MyFooter = () => {
           >
             <Typography
               sx={{
-                fontFamily: "Montserrat",
                 fontSize: { xs: "14px", sm: "20px" },
                 textAlign: { xs: "center", md: "start" },
                 fontWeight: 500,
@@ -106,28 +113,25 @@ const MyFooter = () => {
             <Box>
               <Typography
                 sx={{
-                  fontFamily: "Montserrat",
-                  fontSize: { xs: "15px", sm: "16px" },
+                  fontSize: { xs: "14px", sm: "16px" },
                   textAlign: { xs: "center", md: "start" },
                   mt: { xs: "0px", md: "10px" },
                   lineHeight: "120%",
                 }}
               >
-                Bulevar Zorana Dindic 125 Belgrade Serbia
+                15A Nand Prem, behind Parle Book Depot, Nehru Road, Opp. HDFC bank, Vile Parle EAST.
               </Typography>
               <Typography
                 sx={{
-                  fontFamily: "Montserrat",
                   fontSize: { xs: "15px", sm: "16px" },
                   textAlign: { xs: "center", md: "start" },
                   mt: { xs: "0px", sm: "8px" },
                 }}
               >
-                +908 89097 890
+                +91 97734 99614
               </Typography>
               <Typography
                 sx={{
-                  fontFamily: "Montserrat",
                   fontSize: { xs: "15px", sm: "16px" },
                   textAlign: { xs: "center", md: "start" },
                   mt: { xs: "0px", md: "7px" },
@@ -143,7 +147,7 @@ const MyFooter = () => {
                   display: "flex",
                   gap: "20px",
                   alignItems: "center",
-                  justifyContent: {xs: "start", md:'space-between'}
+                  justifyContent: { xs: "start", md: 'start' }
                 }}
               >
                 <Box
@@ -155,11 +159,12 @@ const MyFooter = () => {
                     display: "flex",
                     justifyContent: "center", // Center the content horizontally
                     alignItems: "center", // Center the content vertically
-                    width: "30px", // Set the width of the box
-                    height: "30px", // Set the height of the box
+                    width: "20px", // Set the width of the box
+                    height: "17px", // Set the height of the box
+                    cursor: 'pointer'
                   }}
                 >
-                  <img src={facebookLogo} style={{ width: "100px", height: "40px" }} alt="" />
+                  <img src={facebookLogo} style={{ width: "100px", height: "40px" }} alt="facebook logo" />
                 </Box>
                 <Box
                   sx={{
@@ -170,13 +175,15 @@ const MyFooter = () => {
                     display: "flex",
                     justifyContent: "center",
                     alignItems: "center",
-                    width: "30px",
-                    height: "30px",
+                    width: "20px",
+                    height: "17px",
+                    cursor: 'pointer'
                   }}
+                  onClick={openWhatsApp}
                 >
-                  <img src={whatsappLogo} style={{ width: "100px", height: "40px" }} alt="" />
+                  <img src={whatsappLogo} style={{ width: "100px", height: "40px" }} alt="whatsapp logo" />
                 </Box>
-                <Box
+                {/* <Box
                   sx={{
                     padding: "12px 13px 16px 13px",
                     background: "#FFF",
@@ -202,7 +209,7 @@ const MyFooter = () => {
                   }}>
                     <img src={whatsappLogo} style={{ width: "100px", height: "40px" }} alt="" />
                   </Box>
-                </Box>
+                </Box> */}
               </Box>
             </Box>
           </Box>
@@ -223,57 +230,72 @@ const MyFooter = () => {
           >
             <Typography
               sx={{
-                fontFamily: "Montserrat",
                 fontSize: { xs: "14px", sm: "20px" },
                 textAlign: { xs: "center", md: "start" },
                 fontWeight: 500,
-                // color: "#fff",
-                mt: "30px"
+                mt: "30px",
+                width:'fit-content',
               }}
             >
               Quick links
             </Typography>
             {/* ------- */}
             <Typography
+              component={Link}
+              to="/"
               sx={{
-                fontFamily: "Montserrat",
                 fontSize: { xs: "15px", sm: "16px" },
                 textAlign: { xs: "center", md: "left" },
-                mt: { xs: "5px", md: "4px" },
-                cursor:'pointer'
+                mt: { xs: "0px", md: "10px" },
+                cursor: 'pointer',
+                textDecoration: 'none',
+                color: 'black',
+                width:'fit-content',
+              }}
+            >
+              Home
+            </Typography>
+            <Typography
+              component={Link}
+              to="/about"
+              sx={{
+                fontSize: { xs: "15px", sm: "16px" },
+                textAlign: { xs: "center", md: "left" },
+                cursor: 'pointer',
+                textDecoration: 'none',
+                color: 'black',
+                width:'fit-content',
               }}
             >
               About us
             </Typography>
             <Typography
+              component={Link}
+              to="/contact"
               sx={{
-                fontFamily: "Montserrat",
                 fontSize: { xs: "15px", sm: "16px" },
                 textAlign: { xs: "center", md: "left" },
-                cursor:'pointer'
+                cursor: 'pointer',
+                textDecoration: 'none',
+                color: 'black',
+                width:'fit-content',
               }}
             >
               Contact us
             </Typography>
             <Typography
+              component={Link}
+              to="/courses"
               sx={{
-                fontFamily: "Montserrat",
                 fontSize: { xs: "15px", sm: "16px" },
                 textAlign: { xs: "center", md: "left" },
-                cursor:'pointer'
+                cursor: 'pointer',
+                textDecoration: 'none',
+                color: 'black',
+                width:'fit-content',
               }}
             >
-              Privacy Policy
-            </Typography>
-            <Typography
-              sx={{
-                fontFamily: "Montserrat",
-                fontSize: { xs: "15px", sm: "16px" },
-                textAlign: { xs: "center", md: "left" },
-                cursor:'pointer'
-              }}
-            >
-              Terms & Condition
+              Courses
             </Typography>
           </Box>
           {/* ----------- third column start from here. */}
@@ -286,42 +308,45 @@ const MyFooter = () => {
               display: "flex",
               flexDirection: "column",
               gap: "6px",
-              mt: { xs: "20px", md: "42px" },
+              mt: { xs: "20px", md: "52px" },
             }}
           >
+            {/* <Typography variant="h6" sx={{ textAlign: "center", color: "#f55a00", mb: "0.5vh" }}>
+              Stay up to date with the latest courses
+            </Typography> */}
             <Box
-            sx={{
-              boxSizing: "border-box",
-              ml: { xs: "0px", md: "10px" },
-              display: "flex",
-              justifyContent:'center',
-              gap: "6px",
-              mt: { xs: "20px", md: "42px" },
-            }}
+              sx={{
+                boxSizing: "border-box",
+                ml: { xs: "0px", md: "10px" },
+                display: "flex",
+                justifyContent: 'center',
+                gap: "6px",
+                mt: { xs: "20px", md: "42px" },
+              }}
             >
-            <form 
-            ref={form}
-            onSubmit={handleSubmit}
-            >
-              <TextField
-                label="Email"
-                variant="outlined"
-                type="email"
-                value={email}
-                onChange={handleEmailChange}
-                fullWidth
-                required
-              />
-              <Button
-                type="submit"
-                variant="contained"
-                color="primary"
-                disabled={isSubmitDisabled}
-                sx={{ mt: '12px' }}
+              <form
+                ref={form}
+                onSubmit={handleSubmit}
               >
-                Submit
-              </Button>
-            </form>
+                <TextField
+                  label="Email"
+                  variant="outlined"
+                  type="email"
+                  value={email}
+                  onChange={handleEmailChange}
+                  fullWidth
+                  required
+                />
+                <Button
+                  type="submit"
+                  variant="contained"
+                  color="primary"
+                  disabled={isSubmitDisabled}
+                  sx={{ mt: '12px' }}
+                >
+                  Submit
+                </Button>
+              </form>
             </Box>
           </Box>
           {/* fourth column start from here */}
@@ -331,13 +356,20 @@ const MyFooter = () => {
                 xs: "70%",
                 md: "35%",
                 margin: "auto",
-                boxShadow: "rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;",
                 display: "flex",
                 justifyContent: "end",
               },
             }}
           >
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3770.2057461745094!2d72.8422987734602!3d19.098627851265206!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c9b14e318aa3%3A0xa42da1932d336ae0!2sVile%20Parle%20Station%20(E)!5e0!3m2!1sen!2sin!4v1702794165334!5m2!1sen!2sin" width="800" height="250" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3770.2057461745094!2d72.8422987734602!3d19.098627851265206!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c9b14e318aa3%3A0xa42da1932d336ae0!2sVile%20Parle%20Station%20(E)!5e0!3m2!1sen!2sin!4v1702794165334!5m2!1sen!2sin"
+              width="800"
+              height="250"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              style={{ border: 'none', boxShadow: 'none' }}>
+            </iframe>
           </Box>
         </Box>
         {/* bottom footer which have copyright content. */}
@@ -367,10 +399,10 @@ const MyFooter = () => {
 
       <Snackbar open={open} autoHideDuration={6000} onClose={handleClose}>
         <Alert onClose={handleClose} severity="success" sx={{ width: '100%' }}>
-         Email sent successfully!
+          Email sent successfully!
         </Alert>
       </Snackbar>
-      
+
 
     </>
   )
