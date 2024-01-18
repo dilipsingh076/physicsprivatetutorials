@@ -4,8 +4,14 @@ import './App.css'
 import CombineRouter from './Routes/CombineRouter'
 import MyFooter from './components/Footer/MyFooter'
 import Navbar from './components/Navbar/Navbar'
+import { useEffect } from 'react'
+import { useLocation } from 'react-router-dom'
 
 function App() {
+  const location = useLocation();
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location]);
   
   return (
     <>
@@ -14,7 +20,7 @@ function App() {
 
       <CombineRouter/>
     </Box>
-       <MyFooter/>
+    <MyFooter/>
     </>
   )
 }
