@@ -54,7 +54,7 @@ const Contactform = () => {
   return (
     <>
       <form onSubmit={formik.handleSubmit}>
-        <Box sx={{ height: "100px", width: "100%", display: "flex", flexDirection: "column", gap: "40px", color: "#000" }}>
+        <Box sx={{ width: "100%", display: "flex", flexDirection: "column", gap: "40px", color: "#000" }}>
           <Box sx={{ display: "flex", width: "100%", justifyContent: "space-between" }}>
             <TextField
               id="firstName"
