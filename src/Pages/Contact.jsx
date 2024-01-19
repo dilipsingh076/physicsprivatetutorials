@@ -25,12 +25,12 @@ const Contact = () => {
 
       <Box
         sx={{
-          boxShadow: "0px 0px 60px 30px rgba(0, 0, 0, 0.03)",
+                    boxShadow: "0px 0px 60px 30px rgba(0, 0, 0, 0.03)",
           padding: "10px",
           borderRadius: "10px",
           width:{sm: "60%",md:"80%"},
           m: "auto",
-          height: "75vh",
+          height: "auto",
           display: "flex",
           // justifyContent: "space-between"
           mb: "50px",
@@ -44,12 +44,10 @@ const Contact = () => {
             // justifyContent: "space-between",
             color: "#fff",
             width: "40%",
-            height: "100%",
             padding: "40px",
             position: "relative",
             borderRadius: "10px",
             boxSizing: "border-box",
-
             gap: "30px",
           }}
         >
@@ -66,7 +64,7 @@ const Contact = () => {
               height: "40%",
               display: "flex",
               flexDirection: "column",
-              gap: "40px",
+              gap: "30px",
             }}
           >
             <Typography sx={{ fontSize: "14px" }}> +91 9773499614</Typography>
@@ -107,12 +105,11 @@ const Contact = () => {
         {/* ----------------- Right Side -------- */}
         <Box
           sx={{
-            display: "flex",
+                        display: "flex",
             flexDirection: "column",
             justifyContent: "space-between",
             color: "#fff",
             width: "60%",
-            height: "100%",
             padding: "40px",
             position: "relative",
           }}
