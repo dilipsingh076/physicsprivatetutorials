@@ -39,7 +39,7 @@ const Courses = () => {
               fontWeight: "700",
             }}
           >
-            Carrers
+            Courses
           </Typography>
 
           <Typography
@@ -50,7 +50,7 @@ const Courses = () => {
               fontSize: "18px",
             }}
           >
-            PHYSICS PRIVATE TUTORIALS is your destination that offers expert coaching for 11th, 12th, JEE and NEET apirant.
+            we believe that learning physics should be an exciting journey that sparks curiosity and creativity. Our physics courses are designed to make the subject come alive for students of all ages, from preschool to pre-tertiary levels.
           </Typography>
           {/* <Box sx={{ width: "20%" }}>
             <Bluebtn Buttontitle={"See More"} />
