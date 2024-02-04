@@ -1,7 +1,7 @@
 import { Box , Container, Typography } from "@mui/material";
 import aboutimage from "../assets/aboutimag.png";
 import Infocard from "../components/AboutCompo/Infocard";
-import { zigzag } from "../utils";
+import { coursepic, zigzag } from "../utils";
 
 
 const Courses = () => {
@@ -9,7 +9,7 @@ const Courses = () => {
     <>
       <Box
         style={{
-          backgroundImage: `url(${aboutimage})`,
+          backgroundImage: `url(${coursepic})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
           height: "70vh",
@@ -86,7 +86,7 @@ const Courses = () => {
         <Box sx={{ display: "flex", flexDirection: "column", gap: "20px" }}>
           <Infocard
             data={{
-              title: "Developing Confident and Successful Learners",
+              title: "11th Science",
               desc: "Founded by the education expert with decades of experience Prof. Rashmi B Choudhary, M.S.C Physics by Research (Mumbai) Physics Private Tutorials help our studends to achive their objectives in an enlightening enviourment filled with enerygy.",
             }}
           />
@@ -95,7 +95,7 @@ const Courses = () => {
           <Infocard
             data={{
               position: "left",
-              title: "Enjoy Learning with a Unique Classroom Experience",
+              title: "12th Science",
               desc: "We provide step to step interaction with our students while they toward their goal.",
             }}
           />
@@ -104,7 +104,7 @@ const Courses = () => {
         <Box>
           <Infocard
             data={{
-              title: "Passionate Teachers That Make a Difference",
+              title: "MHT-CET",
               desc: "We ensure great result oriented teaching with dedicated learning enviourment",
             }}
           />
@@ -113,7 +113,7 @@ const Courses = () => {
           <Infocard
             data={{
               position: "left",
-              title: "Empowering Futures: A Pledge to Personal and Professional Growth",
+              title: "J.E.E Mains",
               desc: "we Provide Strong commitment for carrer objective presonal and professional developement.",
             }}
           />
@@ -121,7 +121,7 @@ const Courses = () => {
         <Box>
           <Infocard
             data={{
-              title: "Elevating Success Across Boards and Competitive Exams",
+              title: "J.E.E Advance",
               desc: "Physics Private Tutorials provide a complete coaching for all boards [H.S.C, CBSE, I.S.C] along with board the incited do complete prepration for MHT-CET, JEE, Mains/Advance, NEET, BITS, NIT, IIT etc.",
             }}
           />
@@ -130,7 +130,15 @@ const Courses = () => {
           <Infocard
             data={{
               position: "left",
-              title: "Customized Learning Journey",
+              title: "N.E.E.T",
+              desc: "We have special doubt leacture in small group regular test as per the student. We have regular counsellinge session for the better met of student.",
+            }}
+          />
+        </Box>
+        <Box>
+          <Infocard
+            data={{
+              title: "N.E.E.T Repeaters",
               desc: "We have special doubt leacture in small group regular test as per the student. We have regular counsellinge session for the better met of student.",
             }}
           />

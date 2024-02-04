@@ -11,11 +11,6 @@ import {
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import ResponsiveNav from "./ResponsiveNav ";
 import { brandLogo } from "../../utils";
-// import logo from "../../Utils/Logo/Logo.png";
-// import logoframe from "../../Utils/Logo/Homenavfram.png";
-// import normalmenue from "../../Utils/Logo/restmenu.png";
-// import activemenue from "../../Utils/Logo/activemenu.png";
-// import { imgsize } from "../../Styles/CommonStyles";
  
 import MenuIcon from '@mui/icons-material/Menu';
 import MenuOpenIcon from '@mui/icons-material/MenuOpen';
