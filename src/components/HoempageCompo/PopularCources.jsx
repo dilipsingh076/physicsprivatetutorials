@@ -1,6 +1,40 @@
-import { Box, Button, Typography } from "@mui/material";
-import React from "react";
+import { Box,   Paper, Typography ,Button,} from "@mui/material";
 import img1 from "./Assets/img1.png";
+import SectionTitle from "./SectionTitle";
+
+
+const ProgramItem = ({ title, background, border }) => {
+  return (
+    <Paper
+      sx={{
+        paddingLeft: 2,
+        paddingRight: 2,
+        paddingTop: 1,
+        paddingBottom: 1,
+        borderRadius: 1,
+        background: background || "transparent",
+        border: border || "none",
+        justifyContent: "flex-start",
+        alignItems: "flex-start",
+        gap: 1,
+        display: "flex",
+      }}
+    >
+      <Typography
+        sx={{
+          color: background ? "white" : "#818C96",
+          fontSize: 12,
+          fontFamily: "Raleway",
+          fontWeight: "500",
+          textTransform: "capitalize",
+          wordWrap: "break-word",
+        }}
+      >
+        {title}
+      </Typography>
+    </Paper>
+  );
+};
 const PopularCources = () => {
   let category = [
     {
@@ -33,9 +67,64 @@ const PopularCources = () => {
   ];
   return (
     <>
-      <Box sx={{ display: "flex", width: "85%", margin: "auto", gap: "20px",boxSizing:"border-box" }}>
-        {category?.map((el) => (
+     <Box>
+          <SectionTitle title={"Popular Courses"} />
+
           <Box
+          sx={{mt:{xs:"30px",md:"0px"}}}
+            width="100%"
+            height="100%"
+            display="flex"
+            justifyContent="center"
+            alignItems="center"
+          >
+            <Paper
+              sx={{
+                width: "100%",
+                height: 90,
+                position: "relative",
+                boxShadow: "none",
+              }}
+            >
+              <Box
+                sx={{
+                  width: "100%",
+                  height: "100%",
+                  display: "flex",
+                  position: "absolute",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  flexWrap:"wrap",
+                  gap: 1,
+                  boxSizing:"border-box",
+                }}
+              >
+                <ProgramItem title="All Program" background="#063995" />
+                <ProgramItem title="UI/UX Design" border="1px #C4C4C4 solid" />
+                <ProgramItem
+                  title="Program Design"
+                  border="1px #C4C4C4 solid"
+                />
+                <ProgramItem
+                  title="Program Design"
+                  border="1px #C4C4C4 solid"
+                />
+                <ProgramItem
+                  title="Program Design"
+                  border="1px #C4C4C4 solid"
+                />
+                <ProgramItem
+                  title="Program Design"
+                  border="1px #C4C4C4 solid"
+                />
+              </Box>
+            </Paper>
+          </Box>
+        </Box>
+      <Box sx={{ pt:"30px",display: "flex",flexWrap:{xs:"wrap" ,md:"nowrap"}, width: "85%", margin: "auto", gap: {xs:"30px",sm:"20px"},boxSizing:"border-box" }}>
+        {category?.map((el,index) => (
+          <Box
+            key={index}
             sx={{
               display: "flex",
               flexDirection: "column",
@@ -43,7 +132,7 @@ const PopularCources = () => {
               alignItems: "center",
               boxSizing: "border-box",
               background: "#fff",
-              gap: "10px",
+              gap: {xs:"10px",sm:"10px"},
               borderRadius: "15px",
               boxShadow: "0px 10px 60px 0px rgba(38, 45, 118, 0.08)",
               cursor: "pointer",
@@ -110,7 +199,6 @@ const PopularCources = () => {
               >
                 <Typography
                   sx={{
-                    fontWeight: "600",
                     fontFamily: "Inter",
                     color: "#C20000",
                     fontWeight: "700",

@@ -1,14 +1,15 @@
-import { Box, Button, Container, Typography } from "@mui/material";
+import { Box, Container, Typography } from "@mui/material";
 import aboutimage from "../assets/aboutimag.png";
-import Bluebtn from "../components/Buttons/Bluebtn";
 import Infocard from "../components/AboutCompo/Infocard";
 import frame1 from "../utils/1frame.png";
-import teacherimg from "../utils/teacherimg.png"
-import { textContent1, textContent2, textContent3 } from '../components/TextContent/TextContent';
-import { useState } from "react";
+import teacherimg from "../utils/teacherimg.png";
+import {
+  textContent1,
+  textContent2,
+  textContent3,
+} from "../components/TextContent/TextContent";
 import { zigzag } from "../utils";
 import { TruncatedText } from "../components/TruncatedText/TruncatedText";
-
 
 const About = () => {
   return (
@@ -20,6 +21,7 @@ const About = () => {
           backgroundPosition: "center",
           height: "70vh",
           position: "relative",
+          width: "100%",
         }}
       >
         <Box
@@ -34,6 +36,7 @@ const About = () => {
             justifyContent: "center",
             alignItems: "center",
             gap: "10px",
+            width: { xs: "95%", md: "50%" },
           }}
         >
           <Typography
@@ -41,7 +44,7 @@ const About = () => {
             sx={{
               color: "white",
               fontFamily: "Source Serif",
-              fontSize: "74px",
+              fontSize: { xs: "45px", md: "74px" },
               fontWeight: "700",
             }}
           >
@@ -50,13 +53,14 @@ const About = () => {
 
           <Typography
             sx={{
-              width: "70%",
+              width: { xs: "100%", md: "70%" },
               textAlign: "center",
-              fontFamily: "Lato",
               fontSize: "18px",
+              fontFamily: "Raleway",
             }}
           >
-            PHYSICS PRIVATE TUTORIALS is your destination that offers expert coaching for 11th, 12th, JEE and NEET apirant.
+            PHYSICS PRIVATE TUTORIALS is your destination that offers expert
+            coaching for 11th, 12th, JEE and NEET apirant.
           </Typography>
           {/* <Box sx={{ width: "20%" }}>
             <Bluebtn Buttontitle={"See More"} />
@@ -79,14 +83,18 @@ const About = () => {
         >
           <Typography
             sx={{
-              fontFamily: "Source Serif",
-              fontSize: "34px",
-              fontWeight: "600",
+              fontFamily: "Raleway",
+              fontSize: { xs: "28px", md: "34px" },
+              fontWeight: "700",
+              lineHeight: { xs: "30px", md: "40px" },
+              textAlign: "center",
             }}
           >
             Preparing Students to Achieve Success
           </Typography>
-          <img src={zigzag} />
+          <Box sx={{ width: { xs: "40%", md: "30%" }, height: "100%" }}>
+            <img src={zigzag} style={{ width: "100%", height: "100%" }} />
+          </Box>
         </Box>
 
         <Box sx={{ display: "flex", flexDirection: "column", gap: "20px" }}>
@@ -119,7 +127,8 @@ const About = () => {
           <Infocard
             data={{
               position: "left",
-              title: "Empowering Futures: A Pledge to Personal and Professional Growth",
+              title:
+                "Empowering Futures: A Pledge to Personal and Professional Growth",
               desc: "we Provide Strong commitment for carrer objective presonal and professional developement.",
             }}
           />
@@ -150,18 +159,21 @@ const About = () => {
             justifyContent: "center",
             alignItems: "center",
             gap: "10px",
+            fontFamily: "Raleway",
           }}
         >
           <Typography
             sx={{
               fontFamily: "Source Serif",
-              fontSize: "34px",
+              fontSize: { xs: "25px", md: "34px" },
               fontWeight: "600",
             }}
           >
             Teachers
           </Typography>
-          <img src={zigzag} />
+          <Box sx={{ width: { xs: "40%", md: "30%" }, height: "100%" }}>
+            <img src={zigzag} style={{ width: "100%", height: "100%" }} />
+          </Box>
         </Box>
 
         <Box
@@ -169,19 +181,40 @@ const About = () => {
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
-            flexDirection:"column"
+            flexDirection: "column",
           }}
         >
-          <img src={teacherimg} alt=""  style={{marginRight:"-150px",marginBottom:"-70PX"}}/>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="348"
-            height="155"
-            viewBox="0 0 348 155"
-            fill="none"
+          <Box
+            sx={{
+              boxSizing: "border-box",
+              mr: { xs: "-20px", md: "-150px" },
+              mb: { xs: "-60px", md: "-70PX" },
+              width: { xs: "100%", md: "40%" },
+            }}
           >
-            <path d="M0 119V34L347.5 0V154.5L0 119Z" fill="#063995" />
-          </svg>
+            <img
+              src={teacherimg}
+              alt=""
+              style={{ width: "100%", height: "100%" }}
+            />
+          </Box>
+          <Box
+            sx={{
+              width: { xs: "300px", md: "348px" },
+              height: { xs: "120px", md: "155px" },
+              ml: { xs: "-100px", md: "" },
+            }}
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="100%"
+              height="100%"
+              viewBox="0 0 348 155"
+              fill="none"
+            >
+              <path d="M0 119V34L347.5 0V154.5L0 119Z" fill="#063995" />
+            </svg>
+          </Box>
         </Box>
 
         <Box
@@ -196,14 +229,16 @@ const About = () => {
         >
           <Typography
             sx={{
-              fontFamily: "Source Serif",
-              fontSize: "34px",
-              fontWeight: "600",
+              fontFamily: "Raleway",
+              fontSize: { xs: "25px", md: "34px" },
+              fontWeight: "700",
             }}
           >
             Why it’s works
           </Typography>
-          <img src={zigzag} />
+          <Box sx={{ width: { xs: "40%", md: "30%" }, height: "100%" }}>
+            <img src={zigzag} style={{ width: "100%", height: "100%" }} />
+          </Box>
         </Box>
 
         <Box
@@ -211,11 +246,13 @@ const About = () => {
             display: "flex",
             justifyContent: "space-between",
             alignItems: "center",
+            flexWrap: { xs: "wrap", md: "nowrap" },
+            flexDirection: { xs: "column", md: "row" },
           }}
         >
           <Box
             sx={{
-              width: "20vw",
+              width: { xs: "90vw", md: "20vw" },
               textAlign: "center",
               display: "flex",
               flexDirection: "column",
@@ -231,7 +268,7 @@ const About = () => {
             />
             <Typography
               sx={{
-                fontFamily: "Source Serif",
+                fontFamily: "Raleway",
                 fontSize: "22px",
                 fontWeight: "600",
               }}
@@ -243,7 +280,7 @@ const About = () => {
 
           <Box
             sx={{
-              width: "20vw",
+              width: { xs: "90vw", md: "20vw" },
               textAlign: "center",
               display: "flex",
               flexDirection: "column",
@@ -259,9 +296,10 @@ const About = () => {
             />
             <Typography
               sx={{
-                fontFamily: "Source Serif",
+                fontFamily: "Raleway",
                 fontSize: "22px",
                 fontWeight: "600",
+                color: "",
               }}
             >
               Unlocking Potential
@@ -271,7 +309,7 @@ const About = () => {
 
           <Box
             sx={{
-              width: "20vw",
+              width: { xs: "90vw", md: "20vw" },
               textAlign: "center",
               display: "flex",
               flexDirection: "column",
@@ -287,7 +325,7 @@ const About = () => {
             />
             <Typography
               sx={{
-                fontFamily: "Source Serif",
+                fontFamily: "Raleway",
                 fontSize: "22px",
                 fontWeight: "600",
               }}

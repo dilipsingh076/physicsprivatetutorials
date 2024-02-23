@@ -1,16 +1,15 @@
 import { Box, Typography } from "@mui/material";
-import React from "react";
 import Contactform from "../components/ContactCompo/ContactForm";
 import { bigellise } from "../utils";
 
 const Contact = () => {
   return (
     <>
-      <Box sx={{ textAlign: "center" }}>
+      <Box sx={{ textAlign: "center",mt:"120px" }}>
         <Typography
           sx={{
             color: "#063995",
-            fontSize: "40px",
+            fontSize: {xs:"35px",md:"40px"},
             fontFamily: "Poppins",
             fontWeight: "700",
           }}
@@ -18,7 +17,7 @@ const Contact = () => {
           {" "}
           Contact Us
         </Typography>
-        <Typography sx={{ fontSize: "16px", fontWeight: "500", mb: "10px" }}>
+        <Typography sx={{ fontSize: "16px", fontWeight: "500", mb:{xs: "10px",md:"50px"} }}>
           Any question or remarks? Just write us a message!
         </Typography>
       </Box>
@@ -34,6 +33,8 @@ const Contact = () => {
           display: "flex",
           // justifyContent: "space-between"
           mb: "50px",
+          // flexDirection:{xs:"column",md:"row"},
+          flexWrap:{xs:"wrap",md:"nowrap"}
         }}
       >
         <Box
@@ -43,7 +44,7 @@ const Contact = () => {
             flexDirection: "column",
             // justifyContent: "space-between",
             color: "#fff",
-            width: "40%",
+            width:{xs:"100%",md: "40%"},
             padding: "40px",
             position: "relative",
             borderRadius: "10px",
@@ -52,10 +53,10 @@ const Contact = () => {
           }}
         >
           <Box>
-            <Typography sx={{ fontSize: "28px" }}>
+            <Typography sx={{  fontSize: {xs:"25px",md:"30px"},}}>
               Contact Information
             </Typography>
-            <Typography sx={{ fontSize: "18px" }}>
+            <Typography sx={{ fontSize:{xs: "12px",md:"13px"} }}>
               Say something to start a live chat!
             </Typography>
           </Box>
@@ -88,7 +89,7 @@ const Contact = () => {
                 cy="69"
                 r="69"
                 fill="#FFF9F9"
-                fill-opacity="0.13"
+                fillOpacity="0.13"
               />
             </svg>
           </Box>
@@ -109,7 +110,7 @@ const Contact = () => {
             flexDirection: "column",
             justifyContent: "space-between",
             color: "#fff",
-            width: "60%",
+            width:{xs:"100%",md: "60%"},
             padding: "40px",
             position: "relative",
           }}

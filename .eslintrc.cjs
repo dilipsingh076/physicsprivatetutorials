@@ -42,5 +42,6 @@ module.exports = {
     ],
     // Disable specific ESLint rules here
     'rule-name': 'off',
+    "react/prop-types": "off"
   },
 }

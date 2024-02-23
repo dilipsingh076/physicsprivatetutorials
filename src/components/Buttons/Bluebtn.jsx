@@ -1,17 +1,23 @@
-import { Button } from '@mui/material'
-import React from 'react'
+import { Button } from "@mui/material";
 
-const Bluebtn = ({Buttontitle}) => {
+const Bluebtn = ({ Buttontitle }) => {
   return (
     <>
-
-
-     <Button sx={{width:"100%",fontFamily:"Loto" ,borderRadius:'10px',color:"#fff",background:"#063995",padding:"10px",textTransform:"capitalize"}}>
+      <Button
+        sx={{
+          width: "100%",
+          fontFamily: "Raleway",
+          borderRadius: "10px",
+          color: "#fff",
+          background: "#063995",
+          padding: { xs: "5px", md: "10px" },
+          textTransform: "capitalize",
+        }}
+      >
         {Buttontitle}
-      </Button>   
-
+      </Button>
     </>
-  )
-}
+  );
+};
 
-export default Bluebtn
+export default Bluebtn;

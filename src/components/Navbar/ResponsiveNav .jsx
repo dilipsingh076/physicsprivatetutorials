@@ -9,10 +9,10 @@ const ResponsiveNav = ({ anchor, Tabs, state, toggleDrawer }) => {
       <Drawer anchor="left" open={state[anchor]} onClose={toggleDrawer(false)}>
         {/* Your drawer content goes here */}
         <Box
-          sx={{
-            width: "40vw",
-            position: "relative",
-          }}
+         sx={{
+          width: "40vw",
+          position: "relative",
+        }}
         >
           <Box
             sx={{

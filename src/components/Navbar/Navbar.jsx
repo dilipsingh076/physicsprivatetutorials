@@ -1,14 +1,13 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import {
   AppBar,
   Box,
-  Button,
   Toolbar,
   Typography,
   useScrollTrigger,
   Slide,
 } from "@mui/material";
-import { Link, useLocation, useNavigate } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import ResponsiveNav from "./ResponsiveNav ";
 import { brandLogo } from "../../utils";
  
@@ -21,18 +20,17 @@ const Navbar = () => {
     left: false, // Only the left anchor is kept
   });
 
-  let navigate = useNavigate();
 
-  const handeldlogin = () => {
-    let resdata = JSON.parse(localStorage.getItem("data"));
-    console.log(resdata);
-    if (resdata?.r?.email_verified == 1) {
+  // const handeldlogin = () => {
+  //   let resdata = JSON.parse(localStorage.getItem("data"));
+  //   console.log(resdata);
+  //   if (resdata?.r?.email_verified == 1) {
     
-      navigate("/work/");
-    } else {
-      navigate("/login");
-    }
-  };
+  //     navigate("/work/");
+  //   } else {
+  //     navigate("/login");
+  //   }
+  // };
 
   const anchor = "left"; // Set the anchor to 'left' statically
 
@@ -103,14 +101,12 @@ const Navbar = () => {
             <Box
               sx={{
                 display: "flex",
-                justifyContent:"space-around",
+                justifyContent: {xs:"space-between",md:"space-around"},
                 width: "100vw",
                 alignItems: "center",
                 margin: "auto",
                 boxSizing: "border-box",
-                padding:"10px",
-             
-              
+                padding: "10px",
               }}
             >
               <Box sx={{ display: { xs: "none", md: "block" } }}>
@@ -147,8 +143,8 @@ const Navbar = () => {
                     // border:"solid red"
                   }}
                 >
-                  {Tabs?.map((el) => (
-                    <Link to={el.link} style={{ textDecoration: "none" }}>
+                  {Tabs?.map((el,index) => (
+                    <Link key={index} to={el.link} style={{ textDecoration: "none" }}>
                       <Typography
                         sx={{
                           fontSize: "15px",
@@ -175,7 +171,7 @@ const Navbar = () => {
                   onClick={toggleDrawer(true)}
                   sx={{
                     width: { xs: "15px", sm: "20px" },
-                    height: { xs: "15px", sm: "25px" },
+                    height: { xs: "25px", sm: "25px" },
                   }}
                 >
               {state[anchor] ?  <MenuOpenIcon  sx={{color:"#000",cursor:"pointer"}}/> :<MenuIcon  sx={{color:"#000",cursor:"pointer"}} />}
