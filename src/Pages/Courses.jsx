@@ -39,18 +39,18 @@ const Courses = () => {
               fontWeight: "700",
             }}
           >
-            Courses
+            Carrers
           </Typography>
 
           <Typography
             sx={{
               width: "70%",
               textAlign: "center",
-              fontFamily: "Lato",
               fontSize: "18px",
+              fontFamily: "Raleway",
             }}
           >
-            we believe that learning physics should be an exciting journey that sparks curiosity and creativity. Our physics courses are designed to make the subject come alive for students of all ages, from preschool to pre-tertiary levels.
+            PHYSICS PRIVATE TUTORIALS is your destination that offers expert coaching for 11th, 12th, JEE and NEET apirant.
           </Typography>
           {/* <Box sx={{ width: "20%" }}>
             <Bluebtn Buttontitle={"See More"} />
@@ -69,18 +69,27 @@ const Courses = () => {
             justifyContent: "center",
             alignItems: "center",
             gap: "10px",
+            width:"100%",
           }}
         >
+         
+
+
           <Typography
             sx={{
-              fontFamily: "Source Serif",
-              fontSize: "34px",
-              fontWeight: "600",
+              width:"100%",
+              fontFamily: "Raleway",
+              fontSize: { xs: "28px", md: "34px" },
+              fontWeight: "700",
+              lineHeight: { xs: "30px", md: "40px" },
+              textAlign: "center",
             }}
           >
-            Preparing Students to Achieve Success
+             Preparing Students to Achieve Success
           </Typography>
-          <img src={zigzag} />
+          <Box sx={{ width: { xs: "40%", md: "30%" }, height: "100%" }}>
+            <img src={zigzag} style={{ width: "100%", height: "100%" }} />
+          </Box>
         </Box>
 
         <Box sx={{ display: "flex", flexDirection: "column", gap: "20px" }}>

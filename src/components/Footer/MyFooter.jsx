@@ -98,14 +98,15 @@ const MyFooter = () => {
               flexDirection: "column",
               gap: "6px",
               mt: { xs: "20px", md: "42px" },
+              color: "rgba(6, 57, 149, 1)",
             }}
           >
             <Typography
               sx={{
-                fontSize: { xs: "14px", sm: "20px" },
+                fontSize: { xs: "18px", sm: "20px" },
                 textAlign: { xs: "center", md: "start" },
                 fontWeight: 500,
-                mt: "30px"
+                mt: { xs: "0px", md: "10px" },
               }}
             >
               Contact us
@@ -222,10 +223,12 @@ const MyFooter = () => {
               boxSizing: "border-box",
               m: "auto",
               ml: { xs: "0px", md: "10px" },
-              display: "flex",
-              flexDirection: "column",
-              gap: "6px",
-              mt: { xs: "20px", md: "42px" },
+              display:'flex',
+              flexDirection: { xs: "row", md: "column" },
+              gap:{xs:"0px",md: "6px"},
+              justifyContent: "space-between",
+              mt: { xs: "20px", md: "28px" },
+              color: "rgba(6, 57, 149, 1)",
             }}
           >
             <Typography
@@ -233,8 +236,8 @@ const MyFooter = () => {
                 fontSize: { xs: "14px", sm: "20px" },
                 textAlign: { xs: "center", md: "start" },
                 fontWeight: 500,
-                mt: "30px",
-                width:'fit-content',
+                mt: { xs: "0px", md: "30px" },
+                // width: "fit-content",
               }}
             >
               Quick links
@@ -247,10 +250,10 @@ const MyFooter = () => {
                 fontSize: { xs: "15px", sm: "16px" },
                 textAlign: { xs: "center", md: "left" },
                 mt: { xs: "0px", md: "10px" },
-                cursor: 'pointer',
-                textDecoration: 'none',
-                color: 'black',
-                width:'fit-content',
+                cursor: "pointer",
+                textDecoration: "none",
+                color: "rgba(6, 57, 149, 1)",
+                // width: "fit-content",
               }}
             >
               Home
@@ -263,7 +266,7 @@ const MyFooter = () => {
                 textAlign: { xs: "center", md: "left" },
                 cursor: 'pointer',
                 textDecoration: 'none',
-                color: 'black',
+                color: "rgba(6, 57, 149, 1)",
                 width:'fit-content',
               }}
             >
@@ -277,7 +280,7 @@ const MyFooter = () => {
                 textAlign: { xs: "center", md: "left" },
                 cursor: 'pointer',
                 textDecoration: 'none',
-                color: 'black',
+                color: "rgba(6, 57, 149, 1)",
                 width:'fit-content',
               }}
             >
@@ -291,7 +294,7 @@ const MyFooter = () => {
                 textAlign: { xs: "center", md: "left" },
                 cursor: 'pointer',
                 textDecoration: 'none',
-                color: 'black',
+                color: "rgba(6, 57, 149, 1)",
                 width:'fit-content',
               }}
             >
@@ -308,7 +311,7 @@ const MyFooter = () => {
               display: "flex",
               flexDirection: "column",
               gap: "6px",
-              mt: { xs: "20px", md: "52px" },
+              mt: { xs: "0px", md: "52px" },
             }}
           >
             {/* <Typography variant="h6" sx={{ textAlign: "center", color: "#f55a00", mb: "0.5vh" }}>
@@ -336,13 +339,24 @@ const MyFooter = () => {
                   onChange={handleEmailChange}
                   fullWidth
                   required
+                  sx={{border:"none"}}
                 />
                 <Button
                   type="submit"
                   variant="contained"
                   color="primary"
                   disabled={isSubmitDisabled}
-                  sx={{ mt: '12px' }}
+                  sx={{ mt: "12px" , background: "#fff",
+
+                  transition: "background 0.3s , color 0.3s ",
+                  "&:hover": {
+                    background: "#063995",
+                    color: "#FFF",
+                  },
+  
+                  textTransform: "capitalize",
+                  boxShadow: "0px 10px 60px 0px rgba(38, 45, 118, 0.08)",
+                  padding: "5px 20px",}}
                 >
                   Submit
                 </Button>
@@ -353,7 +367,7 @@ const MyFooter = () => {
           <Box
             sx={{
               width: {
-                xs: "70%",
+                xs: "90%",
                 md: "35%",
                 margin: "auto",
                 display: "flex",
@@ -367,7 +381,7 @@ const MyFooter = () => {
               height="250"
               allowfullscreen=""
               loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"
+              referrerPolicy="no-referrer-when-downgrade"
               style={{ border: 'none', boxShadow: 'none' }}>
             </iframe>
           </Box>

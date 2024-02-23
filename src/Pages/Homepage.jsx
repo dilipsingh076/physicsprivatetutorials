@@ -1,83 +1,32 @@
 import { Box } from "@mui/system";
-import React from "react";
-import { Course1, PlayButton, Vector1, homeModel } from "../utils";
+import {  PlayButton, homeModel } from "../utils";
 import {
-  Button,
-  Card,
-  CardActionArea,
-  CardContent,
-  CardHeader,
-  Divider,
-  Paper,
   Typography,
 } from "@mui/material";
-import { useNavigate } from "react-router-dom";
-import SectionTitle from "../components/HoempageCompo/SectionTitle";
 import Categorys from "../components/HoempageCompo/Categorys";
 import PopularCources from "../components/HoempageCompo/PopularCources";
-
-const ProgramItem = ({ title, background, border }) => {
-  return (
-    <Paper
-      sx={{
-        paddingLeft: 2,
-        paddingRight: 2,
-        paddingTop: 1,
-        paddingBottom: 1,
-        borderRadius: 1,
-        background: background || "transparent",
-        border: border || "none",
-        justifyContent: "flex-start",
-        alignItems: "flex-start",
-        gap: 1,
-        display: "flex",
-      }}
-    >
-      <Typography
-        sx={{
-          color: background ? "white" : "#818C96",
-          fontSize: 12,
-          fontFamily: "Raleway",
-          fontWeight: "500",
-          textTransform: "capitalize",
-          wordWrap: "break-word",
-        }}
-      >
-        {title}
-      </Typography>
-    </Paper>
-  );
-};
+import BenifitsDetails from "../components/HoempageCompo/BenifitsDetails";
+import WhyShouldJoin from "../components/HoempageCompo/WhyShouldJoin";
 
 const Homepage = () => {
-  const navigate = useNavigate();
-
-  const handleEnrollNow = () => {
-    // Redirect to "/contact" when the button is clicked
-    navigate("/contact");
-  };
 
   return (
     <>
       <Box
-        // className={'flex justify-around'}
         sx={{
-          // border: '1px solid red',
           width: "100%",
           bgcolor: "#dde9ff",
           color: "#2D2D2Dck",
           marginTop: "-100px",
-          height: "650px",
+          // height: "650px",
           display: "flex",
-          justifyContent: "space-between",
+          justifyContent: { xs: "center", md: "space-between" },
+          flexWrap: { xs: "wrap", md: "nowrap" },
         }}
       >
-        {/* left box */}
         <Box
-          // className={'flex justify-around items-center '}
           sx={{
-            // border: '1px solid blue',
-            width: "50%",
+            width: { xs: "90%", md: "60%" },
             bgcolor: "#dde9ff",
             color: "#2D2D2Dck",
             marginTop: "65px",
@@ -85,53 +34,72 @@ const Homepage = () => {
         >
           <Box
             sx={{
-              // border: '1px solid pink',
-              width: "100%",
+              width: { xs: "100%", md: "80%" },
               height: "100%",
               display: "flex",
               justifyContent: "center",
-              alignItems: "center",
+              alignItems: "start",
+              flexDirection: "column",
+              m: "auto",
+              gap: "10px",
             }}
           >
             <Typography
               sx={{
-                // border: '1px solid red',
-                color: "#063995",
-                fontSize: "48px",
-                fontWeight: "700",
-                wordWrap: "break-word",
-                width: "60%",
+                color: "#000",
+                fontSize: { xs: "14px", md: "18px" },
+                width: { xs: "40%", md: "30%" },
+                background: "#fff",
+                borderRadius: "15px",
+                textAlign: "center",
+                padding: "10px",
+                mt: { xs: "50px", md: "0px" },
               }}
             >
-              Grow up your skills by online courses with onlearning
+              Never stop learning
+            </Typography>
+            <Typography
+              sx={{
+                color: "#063995",
+                fontSize: { xs: "36px", md: "48px" },
+                fontWeight: "700",
+                textAlign: {xs:"center",md:"start"},
+                lineHeight: { xs: "50px", md: "70px" },
+                width: { xs: "100%", md: "80%" },
+              }}
+            >
+              Grow up your skills by online courses with Physics Private Tutorials
             </Typography>
           </Box>
         </Box>
-        {/* right box */}
+
         <Box
-          className={"flex justify-around align-center"}
           sx={{
-            // border: '1px solid red',
-            width: "50%",
+            width: { xs: "100%", md: "45%" },
             bgcolor: "#dde9ff",
             color: "#2D2D2Dck",
             marginTop: "65px",
           }}
         >
-          <img src={homeModel} alt="Brand Logo" style={{ height: "580px" }} />
+          <img
+            src={homeModel}
+            alt="Brand Logo"
+            style={{ height: "100%", width: "100%" }}
+          />
         </Box>
       </Box>
+
       <Box
         sx={{
           // border: "1px solid red",
-          display: "flex",
+          display: { xs: "none", md: "flex" },
           justifyContent: "center",
         }}
       >
-        <div
-          style={{
-            width: "10%",
-            height: "180px",
+        <Box
+          sx={{
+            width: { xs: "20%", md: "10%" },
+            height: { xs: "100px", md: "180px" },
             background: "#B1CDFD",
             borderRadius: 9999,
             display: "flex",
@@ -156,98 +124,47 @@ const Homepage = () => {
           >
             <img style={{ height: "40px" }} src={PlayButton} />
           </div>
-        </div>
+        </Box>
       </Box>
+
       <Box
         sx={{
-          // border: '1px solid blue',
-          marginTop: "30px",
+          mt: { xs: "0vh", md: "10vh" },
+          padding: { xs: "50px 0px", md: "" },
         }}
-        width="100%"
-        height="100%"
       >
-        <Box>
-          <SectionTitle title={"Popular Courses"} />
-
-          <Box
-            width="100%"
-            height="100%"
-            display="flex"
-            justifyContent="center"
-            alignItems="center"
-          >
-            <Paper
-              sx={{
-                width: "70%",
-                height: 144,
-                position: "relative",
-                boxShadow: "none",
-              }}
-            >
-              <Box
-                sx={{
-                  width: "100%",
-                  height: "100%",
-                  display: "flex",
-                  position: "absolute",
-                  justifyContent: "center",
-                  alignItems: "center",
-                  gap: 2,
-                }}
-              >
-                <ProgramItem title="All Program" background="#063995" />
-                <ProgramItem title="UI/UX Design" border="1px #C4C4C4 solid" />
-                <ProgramItem
-                  title="Program Design"
-                  border="1px #C4C4C4 solid"
-                />
-                <ProgramItem
-                  title="Program Design"
-                  border="1px #C4C4C4 solid"
-                />
-                <ProgramItem
-                  title="Program Design"
-                  border="1px #C4C4C4 solid"
-                />
-                <ProgramItem
-                  title="Program Design"
-                  border="1px #C4C4C4 solid"
-                />
-              </Box>
-            </Paper>
-          </Box>
-        </Box>
-
         <PopularCources />
       </Box>
 
       <Box
         sx={{
-          display: "flex",
-          flexDirection: "column",
-          gap: "20px",
-          mt: "20vh ",
+          mt: { xs: "0vh", md: "10vh" },
+          padding: { xs: "50px 0px", md: "" },
         }}
       >
-        <SectionTitle title={"Courses Category"} />
-        <Typography
-          sx={{
-            color: "#696984",
-            textAlign: "center",
-            fontFamily: "Raleway",
-            lineHeight: "160%",
-            width: "40%",
-            margin: "auto",
-          }}
-        >
-          Onlearing is one powerful online software suite that combines all the
-          tools needed to run a successful school or office.
-        </Typography>
+        <Categorys />
+      </Box>
+      <Box
+        sx={{
+          mt: { xs: "0vh", md: "10vh" },
+          background: { xs: "#F8F8FF", md: "#fff" },
+          padding: { xs: "50px 0px", md: "" },
+        }}
+      >
+        {/* --------- Benifits ---------- */}
 
-        <Box>
-          <Categorys />
-        </Box>
-      </Box>;
+        <BenifitsDetails />
+      </Box>
+      <Box
+        sx={{
+          mt: { xs: "0vh", md: "10vh" },
+          padding: { xs: "50px 0px 0px 0px", md: "" },
+        }}
+      >
+        {/* --------- Benifits ---------- */}
+
+        <WhyShouldJoin />
+      </Box>
     </>
   );
 };

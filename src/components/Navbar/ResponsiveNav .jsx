@@ -1,11 +1,7 @@
-import React, { useState } from "react";
 import Drawer from "@mui/material/Drawer";
-import Button from "@mui/material/Button";
-import { Box, Divider, Typography } from "@mui/material";
+import { Box,Typography } from "@mui/material";
 import { Link, useLocation } from "react-router-dom";
 import { brandLogo } from "../../utils";
-// import logoicon from "../../Utils/Logo/Logo.png";
-// import { imgsize } from "../../Styles/CommonStyles";
 const ResponsiveNav = ({ anchor, Tabs, state, toggleDrawer }) => {
   let location = useLocation().pathname;
   return (
@@ -13,10 +9,10 @@ const ResponsiveNav = ({ anchor, Tabs, state, toggleDrawer }) => {
       <Drawer anchor="left" open={state[anchor]} onClose={toggleDrawer(false)}>
         {/* Your drawer content goes here */}
         <Box
-          sx={{
-            width: "40vw",
-            position: "relative",
-          }}
+         sx={{
+          width: "40vw",
+          position: "relative",
+        }}
         >
           <Box
             sx={{
@@ -54,8 +50,8 @@ const ResponsiveNav = ({ anchor, Tabs, state, toggleDrawer }) => {
                 m: "auto",
               }}
             >
-              {Tabs?.map((el) => (
-                <Box sx={{ textAlign: "start" }}>
+              {Tabs?.map((el,index) => (
+                <Box key={index} sx={{ textAlign: "start" }}>
                   <Link
                     style={{ textDecoration: "none" }}
                     to={el.link}
@@ -68,61 +64,18 @@ const ResponsiveNav = ({ anchor, Tabs, state, toggleDrawer }) => {
                         padding: "5px",
                         width: "100%",
                         textAlign: "start",
-                        fontSize: location == el.link ? "20px" : "16px",
-                        color: location == el.link ? "#063995" : "#000",
+                        fontSize: location === el.link ? "20px" : "16px",
+                        color: location === el.link ? "#063995" : "#000",
                         
-                        fontWeight: location == el.link ? 800 : 100,
+                        fontWeight: location === el.link ? 800 : 100,
                         fontFamily: "Montserrat",
                       }}
                     >
                       {el.Title}
                     </Typography>
                   </Link>
-                  {/* <Divider sx={{background:"black",mt:"10px",width:"100%"}}/> */}
                 </Box>
               ))}
-              {/* <Link to={"/signup"} style={{ width: "100%" }}>
-                <Button
-                  sx={{
-                    padding: "7px 0px",
-                    bgcolor: "#CED6E2",
-                    width: "180px",
-                    color: "#043873",
-                    fontSize: "14px",
-                    width: "80%",
-                    textTransform: "capitalize",
-                    borderRadius: "5px",
-                    transition: "color 0.3s ease",
-                    "&:hover": {
-                      background: "#052349",
-                      color: "#fff",
-                    },
-                  }}
-                >
-                  Login
-                </Button>
-              </Link> */}
-
-              {/* <Link to={"/signup"} style={{ width: "100%" }}>
-                <Button
-                  sx={{
-                    padding: "7px 0px",
-                    bgcolor: "#CED6E2",
-                    color: "#043873",
-                    width: "80%",
-                    fontSize: "14px",
-                    textTransform: "capitalize",
-                    borderRadius: "5px",
-                    transition: "background 0.3s ease",
-                    "&:hover": {
-                      background: "#052349",
-                      color: "#fff",
-                    },
-                  }}
-                >
-                  Signup
-                </Button>
-              </Link> */}
             </Box>
           </Box>
         </Box>
