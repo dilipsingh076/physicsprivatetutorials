@@ -16,8 +16,7 @@ function App() {
   return (
     <>
     <Navbar/>
-    <Box sx={{m:"100px 0px"}}>
-
+    <Box sx={{m:"80px 0px"}}>
       <CombineRouter/>
     </Box>
     <MyFooter/>

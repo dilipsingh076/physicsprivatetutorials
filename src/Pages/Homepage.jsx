@@ -1,8 +1,6 @@
 import { Box } from "@mui/system";
 import {  PlayButton, homeModel } from "../utils";
-import {
-  Typography,
-} from "@mui/material";
+import {Typography} from "@mui/material";
 import Categorys from "../components/HoempageCompo/Categorys";
 import PopularCources from "../components/HoempageCompo/PopularCources";
 import BenifitsDetails from "../components/HoempageCompo/BenifitsDetails";

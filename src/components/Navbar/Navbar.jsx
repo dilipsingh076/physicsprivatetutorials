@@ -96,7 +96,7 @@ const Navbar = () => {
             // boxShadow:"rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;"
           }}
         >
-          <Toolbar>
+          <Toolbar sx={{background:"rgba(221, 233, 255, 1)"}} >
             {/* Images Box */}
             <Box
               sx={{
@@ -109,17 +109,27 @@ const Navbar = () => {
                 padding: "10px",
               }}
             >
-              <Box sx={{ display: { xs: "none", md: "block" } }}>
+              <Box sx={{ display: { xs: "none", md: "block" },  }}>
                 <Link to={"/"}>
-                  <Box sx={{ width: { xs: "250px", md: "140px" } }}>
-                      <img src={brandLogo} style={{ width:"100%",height:"100%"}} alt="" />  
+                  <Box sx={{ width: {  md: "160px" } }}>
+                    <img
+                      src={brandLogo}
+                      style={{ width: "100%", height: "100%" }}
+                      alt=""
+                    />
                   </Box>
                 </Link>
               </Box>
               <Box sx={{ display: { xs: "block", md: "none" } }}>
                 <Link to={"/"}>
-                  <Box sx={{width: { xs: "100px", md: "200px" }, height: "30px" }}>
-                  <img src={brandLogo} style={{ width:"100%",height:"100%"}} alt="" /> 
+                  <Box
+                    sx={{ width: { xs: "120px" }, height: "40px" }}
+                  >
+                    <img
+                      src={brandLogo}
+                      style={{ width: "100%", height: "100%" }}
+                      alt=""
+                    />
                   </Box>
                 </Link>
               </Box>
@@ -148,12 +158,12 @@ const Navbar = () => {
                       <Typography
                         sx={{
                           fontSize: "15px",
-                          fontWeight: location == el.link ? "800" : "400",
+                          fontWeight: location == el.link ? "800" : "600",
                           color: location == el.link ? "#063995" : "#000",
                           cursor: "pointer",
                           fontFamily: "Montserrat",
                           lineHeight: "120%",
-                          letterSpacing:"0.6px"
+                          letterSpacing: "0.6px",
                         }}
                       >
                         {el.Title}
@@ -161,12 +171,10 @@ const Navbar = () => {
                     </Link>
                   ))}
                 </Box>
-
-             
               </Box>
 
               {/* Hamburger Logo */}
-              <Box sx={{ display: { xs: "block", md: "none" } }}>
+              <Box sx={{ display: { xs: "block", md: "none" },    }}>
                 <Box
                   onClick={toggleDrawer(true)}
                   sx={{
@@ -174,10 +182,15 @@ const Navbar = () => {
                     height: { xs: "25px", sm: "25px" },
                   }}
                 >
-              {state[anchor] ?  <MenuOpenIcon  sx={{color:"#000",cursor:"pointer"}}/> :<MenuIcon  sx={{color:"#000",cursor:"pointer"}} />}
-              
+                  {state[anchor] ? (
+                    <MenuOpenIcon sx={{ color: "#000", cursor: "pointer" }} />
+                  ) : (
+                    <MenuIcon sx={{ color: "#000", cursor: "pointer" }} />
+                  )}
                 </Box>
               </Box>
+
+
             </Box>
           </Toolbar>
         </AppBar>
@@ -187,4 +200,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar
+export default Navbar;

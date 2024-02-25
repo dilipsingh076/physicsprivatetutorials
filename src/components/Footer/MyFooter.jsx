@@ -59,6 +59,7 @@ const MyFooter = () => {
           boxSizing: "border-box",
           color: "#2D2D2Dck",
           clipPath: "ellipse(99% 100% at center bottom)",
+          mt: "5vh",
         }}
       >
         <Box
@@ -73,7 +74,7 @@ const MyFooter = () => {
         >
           <img src={brandLogo} style={{ width: "150px", height: "50px", marginBottom: "20px" }} alt="" />
         </Box>
-        <Divider sx={{ background: "gray", width: "95%", m: "auto", height: "0.3px" }} />
+        <Divider sx={{ background: "rgba(6, 57, 149, 1)", width: "95%", m: "auto", height: "0.1px" }} />
         <Box
           sx={{
             display: "flex",
@@ -120,7 +121,8 @@ const MyFooter = () => {
                   lineHeight: "120%",
                 }}
               >
-                15A Nand Prem, behind Parle Book Depot, Nehru Road, Opp. HDFC bank, Vile Parle EAST.
+                15A Nand Prem, behind Parle Book Depot, Nehru Road, Opp. HDFC
+                bank, Vile Parle EAST.
               </Typography>
               <Typography
                 sx={{
@@ -148,7 +150,7 @@ const MyFooter = () => {
                   display: "flex",
                   gap: "20px",
                   alignItems: "center",
-                  justifyContent: { xs: "start", md: 'start' }
+                  justifyContent: { xs: "center", md: "start" },
                 }}
               >
                 <Box
@@ -156,7 +158,7 @@ const MyFooter = () => {
                     padding: "10px 8px 10px 8px",
                     background: "#FFF",
                     borderRadius: "50%",
-                    boxShadow: "0px 4px 14px rgba(0, 0, 0, 0.15)",
+               
                     display: "flex",
                     justifyContent: "center", // Center the content horizontally
                     alignItems: "center", // Center the content vertically
@@ -165,24 +167,32 @@ const MyFooter = () => {
                     cursor: 'pointer'
                   }}
                 >
-                  <img src={facebookLogo} style={{ width: "100px", height: "40px" }} alt="facebook logo" />
+                  <img
+                    src={facebookLogo}
+                    style={{ width: "100px", height: "40px" }}
+                    alt="facebook logo"
+                  />
                 </Box>
                 <Box
                   sx={{
                     padding: "10px 8px 10px 8px",
                     background: "#FFF",
                     borderRadius: "50%",
-                    boxShadow: "0px 4px 14px rgba(0, 0, 0, 0.15)",
+                  
                     display: "flex",
                     justifyContent: "center",
                     alignItems: "center",
                     width: "20px",
                     height: "17px",
-                    cursor: 'pointer'
+                    cursor: "pointer",
                   }}
                   onClick={openWhatsApp}
                 >
-                  <img src={whatsappLogo} style={{ width: "100px", height: "40px" }} alt="whatsapp logo" />
+                  <img
+                    src={whatsappLogo}
+                    style={{ width: "100px", height: "40px" }}
+                    alt="whatsapp logo"
+                  />
                 </Box>
                 {/* <Box
                   sx={{
@@ -215,7 +225,6 @@ const MyFooter = () => {
             </Box>
           </Box>
 
-
           {/* second columns start from here. */}
           <Box
             sx={{
@@ -223,7 +232,7 @@ const MyFooter = () => {
               boxSizing: "border-box",
               m: "auto",
               ml: { xs: "0px", md: "10px" },
-              display:'flex',
+              display: "flex",
               flexDirection: { xs: "row", md: "column" },
               gap:{xs:"0px",md: "6px"},
               justifyContent: "space-between",
@@ -264,10 +273,10 @@ const MyFooter = () => {
               sx={{
                 fontSize: { xs: "15px", sm: "16px" },
                 textAlign: { xs: "center", md: "left" },
-                cursor: 'pointer',
-                textDecoration: 'none',
+                cursor: "pointer",
+                textDecoration: "none",
                 color: "rgba(6, 57, 149, 1)",
-                width:'fit-content',
+                // width: "fit-content",
               }}
             >
               About us
@@ -278,10 +287,10 @@ const MyFooter = () => {
               sx={{
                 fontSize: { xs: "15px", sm: "16px" },
                 textAlign: { xs: "center", md: "left" },
-                cursor: 'pointer',
-                textDecoration: 'none',
+                cursor: "pointer",
+                textDecoration: "none",
                 color: "rgba(6, 57, 149, 1)",
-                width:'fit-content',
+                // width: "fit-content",
               }}
             >
               Contact us
@@ -292,10 +301,10 @@ const MyFooter = () => {
               sx={{
                 fontSize: { xs: "15px", sm: "16px" },
                 textAlign: { xs: "center", md: "left" },
-                cursor: 'pointer',
-                textDecoration: 'none',
+                cursor: "pointer",
+                textDecoration: "none",
                 color: "rgba(6, 57, 149, 1)",
-                width:'fit-content',
+                // width: "fit-content",
               }}
             >
               Courses
@@ -322,18 +331,15 @@ const MyFooter = () => {
                 boxSizing: "border-box",
                 ml: { xs: "0px", md: "10px" },
                 display: "flex",
-                justifyContent: 'center',
+                justifyContent: "center",
                 gap: "6px",
                 mt: { xs: "20px", md: "42px" },
               }}
             >
-              <form
-                ref={form}
-                onSubmit={handleSubmit}
-              >
+              <form ref={form} onSubmit={handleSubmit}>
                 <TextField
-                  label="Email"
-                  variant="outlined"
+                   placeholder="Email"
+                  // variant="outlined"
                   type="email"
                   value={email}
                   onChange={handleEmailChange}
@@ -343,8 +349,7 @@ const MyFooter = () => {
                 />
                 <Button
                   type="submit"
-                  variant="contained"
-                  color="primary"
+                 
                   disabled={isSubmitDisabled}
                   sx={{ mt: "12px" , background: "#fff",
 
@@ -372,6 +377,7 @@ const MyFooter = () => {
                 margin: "auto",
                 display: "flex",
                 justifyContent: "end",
+                 
               },
             }}
           >
@@ -403,23 +409,18 @@ const MyFooter = () => {
               color: "#fff",
             }}
           >
-            Copyright © 2023  Physics Private Tutorials All rights Rcerved
+            Copyright © 2023 Physics Private Tutorials All rights Rcerved
           </Typography>
         </Box>
       </Box>
 
-
-
-
       <Snackbar open={open} autoHideDuration={6000} onClose={handleClose}>
-        <Alert onClose={handleClose} severity="success" sx={{ width: '100%' }}>
+        <Alert onClose={handleClose} severity="success" sx={{ width: "100%" }}>
           Email sent successfully!
         </Alert>
       </Snackbar>
-
-
     </>
-  )
-}
+  );
+};
 
-export default MyFooter
+export default MyFooter;
