@@ -199,9 +199,9 @@ const PopularCources = () => {
               >
                 <Typography
                   sx={{
+                    fontWeight: "600",
                     fontFamily: "Inter",
                     color: "#C20000",
-                    fontWeight: "700",
                     lineHeight: "150%",
                     fontSize: "16px",
                   }}

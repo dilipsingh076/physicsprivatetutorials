@@ -2,6 +2,8 @@ import Drawer from "@mui/material/Drawer";
 import { Box,Typography } from "@mui/material";
 import { Link, useLocation } from "react-router-dom";
 import { brandLogo } from "../../utils";
+// import logoicon from "../../Utils/Logo/Logo.png";
+// import { imgsize } from "../../Styles/CommonStyles";
 const ResponsiveNav = ({ anchor, Tabs, state, toggleDrawer }) => {
   let location = useLocation().pathname;
   return (
@@ -9,10 +11,10 @@ const ResponsiveNav = ({ anchor, Tabs, state, toggleDrawer }) => {
       <Drawer anchor="left" open={state[anchor]} onClose={toggleDrawer(false)}>
         {/* Your drawer content goes here */}
         <Box
-         sx={{
-          width: "40vw",
-          position: "relative",
-        }}
+          sx={{
+            width: "50vw",
+            position: "relative",
+          }}
         >
           <Box
             sx={{
@@ -64,10 +66,10 @@ const ResponsiveNav = ({ anchor, Tabs, state, toggleDrawer }) => {
                         padding: "5px",
                         width: "100%",
                         textAlign: "start",
-                        fontSize: location === el.link ? "20px" : "16px",
-                        color: location === el.link ? "#063995" : "#000",
+                        fontSize: location == el.link ? "20px" : "16px",
+                        color: location == el.link ? "#063995" : "#000",
                         
-                        fontWeight: location === el.link ? 800 : 100,
+                        fontWeight: location == el.link ? 800 : 100,
                         fontFamily: "Montserrat",
                       }}
                     >

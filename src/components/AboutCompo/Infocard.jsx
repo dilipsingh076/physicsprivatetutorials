@@ -1,33 +1,37 @@
 import { Box, Divider, Typography } from "@mui/material";
 import Bluebtn from "../Buttons/Bluebtn";
-import { pic1 } from "../../utils";
 
 const Infocard = ({ data }) => {
-  console.log(data);
   return (
     <>
       <Box
-         sx={{
-            display: "flex",
-            width: "100%",
-            justifyContent:  "space-between",
-            alignItems: "center",
-            flexDirection: data?.position   ? "row-reverse" : "row",
-          }}
+        sx={{
+          display: "flex",
+          width: "100%",
+          justifyContent: "space-between",
+          alignItems: "center",
+          flexDirection: data?.position ? "row-reverse" : "row",
+          flexWrap: { xs: "wrap-reverse", md: "nowrap" },
+          borderBottom:{xs: "0.5px solid gray",md:"none"},
+          padding: {xs:"20px 10px",md:"0px"},
+          boxSizing: "border-box",
+          
+        }}
       >
         <Box
           sx={{
             display: "flex",
             flexDirection: "column",
             gap: "15px",
-            width: "42%",
+            width: { xs: "100%", md: "42%" },
           }}
         >
           <Typography
             sx={{
-              fontFamily: "Source Serif",
+              fontFamily: "Raleway",
               fontWeight: "600",
-              fontSize: "30px",
+              fontSize: { xs: "22px", md: "30px" },
+              lineHeight: { xs: "30px", md: "40px" },
             }}
           >
             {data?.title}
@@ -39,11 +43,11 @@ const Infocard = ({ data }) => {
           </Box>
         </Box>
 
-        <Box>
+        <Box sx={{ width: "420px", height: "430px" }}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            width="420"
-            height="430"
+            width="100%"
+            height="100%"
             viewBox="0 0 454 450"
             fill="none"
           >
@@ -54,20 +58,8 @@ const Infocard = ({ data }) => {
               fill="#C20000"
               fillOpacity="0.1"
             />
-            <image
-              x="50"  // x-coordinate of the top-left corner of the image
-              y="50"  // y-coordinate of the top-left corner of the image
-              width="85%"  // width of the image
-              height="85%"  // height of the image
-              xlinkHref={pic1}  // replace with the actual image URL
-            />
           </svg>
         </Box>
-
-
-
-
-
       </Box>
     </>
   );

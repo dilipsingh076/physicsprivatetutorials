@@ -79,6 +79,7 @@ const Categorys = () => {
               gap: "10px",
               borderRadius: "15px",
               cursor: "pointer",
+              boxShadow: " rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;",
               transition: "box-shadow 0.3s",
               "&:hover": {
                 boxShadow: "0px 0px 20px 0px rgba(0, 0, 0, 0.2)",
