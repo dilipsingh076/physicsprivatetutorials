@@ -1,41 +1,42 @@
 import { Box,   Paper, Typography ,Button,} from "@mui/material";
 import img1 from "./Assets/img1.png";
 import SectionTitle from "./SectionTitle";
+import { useNavigate } from "react-router-dom";
 
-
-const ProgramItem = ({ title, background, border }) => {
-  return (
-    <Paper
-      sx={{
-        paddingLeft: 2,
-        paddingRight: 2,
-        paddingTop: 1,
-        paddingBottom: 1,
-        borderRadius: 1,
-        background: background || "transparent",
-        border: border || "none",
-        justifyContent: "flex-start",
-        alignItems: "flex-start",
-        gap: 1,
-        display: "flex",
-      }}
-    >
-      <Typography
-        sx={{
-          color: background ? "white" : "#818C96",
-          fontSize: 12,
-          fontFamily: "Raleway",
-          fontWeight: "500",
-          textTransform: "capitalize",
-          wordWrap: "break-word",
-        }}
-      >
-        {title}
-      </Typography>
-    </Paper>
-  );
-};
+// const ProgramItem = ({ title, background, border }) => {
+//   return (
+//     <Paper
+//       sx={{
+//         paddingLeft: 2,
+//         paddingRight: 2,
+//         paddingTop: 1,
+//         paddingBottom: 1,
+//         borderRadius: 1,
+//         background: background || "transparent",
+//         border: border || "none",
+//         justifyContent: "flex-start",
+//         alignItems: "flex-start",
+//         gap: 1,
+//         display: "flex",
+//       }}
+//     >
+//       <Typography
+//         sx={{
+//           color: background ? "white" : "#818C96",
+//           fontSize: 12,
+//           fontFamily: "Raleway",
+//           fontWeight: "500",
+//           textTransform: "capitalize",
+//           wordWrap: "break-word",
+//         }}
+//       >
+//         {title}
+//       </Typography>
+//     </Paper>
+//   );
+// };
 const PopularCources = () => {
+  const navigate = useNavigate()
   let category = [
     {
       title: "Product Management Basic - Course ",
@@ -99,7 +100,20 @@ const PopularCources = () => {
                   boxSizing:"border-box",
                 }}
               >
-                <ProgramItem title="All Program" background="#063995" />
+              <Typography
+                sx={{
+                  color: "#696984",
+                  textAlign: "center",
+                  fontFamily: "Raleway",
+                  lineHeight: "160%",
+                  width: { xs: "100%", sm: "40%" },
+                  margin: "auto",
+                }}
+              >
+                JEE Main & Advanced Prep Course: Comprehensive curriculum preparing students for both JEE Main and Advanced exams, featuring intensive subject coverage, practice sessions, and mock tests.
+
+              </Typography>
+                {/* <ProgramItem title="All Program" background="#063995" />
                 <ProgramItem title="UI/UX Design" border="1px #C4C4C4 solid" />
                 <ProgramItem
                   title="Program Design"
@@ -116,7 +130,7 @@ const PopularCources = () => {
                 <ProgramItem
                   title="Program Design"
                   border="1px #C4C4C4 solid"
-                />
+                /> */}
               </Box>
             </Paper>
           </Box>
@@ -220,6 +234,7 @@ const PopularCources = () => {
                     boxShadow: "0px 10px 60px 0px rgba(38, 45, 118, 0.08)",
                     padding: "5px 20px",
                   }}
+                  onClick={()=> navigate('/contact')}
                 >
                   {" "}
                   {el?.btntitle}

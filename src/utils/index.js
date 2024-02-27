@@ -7,6 +7,9 @@ import PlayButton from './PolygonPlay.png';
 import Vector1 from './Vector1.png'
 import Course1 from './course1.png'
 import zigzag from './zigzag.svg'
+import pic1 from './pic1.png'
+import pic2 from './pic2.png'
+import coursepic from './coursepic.png'
  
 export {
   facebookLogo,
@@ -17,5 +20,8 @@ export {
   PlayButton,
   Vector1,
   Course1,
-  zigzag
+  zigzag,
+  pic1,
+  pic2,
+  coursepic
 };
