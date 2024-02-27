@@ -1,7 +1,9 @@
 import { Box, Button, Typography } from "@mui/material";
 import contentlogo from "./Assets/mdi_star-circle.png";
 import posterimg from "./Assets/girlposterimg.png";
+import { useNavigate } from "react-router-dom";
 const WhyShouldJoin = () => {
+  const navigate = useNavigate()
   let benifits = [
     {
       icon: contentlogo,
@@ -79,7 +81,11 @@ const WhyShouldJoin = () => {
               padding: "10px 20px",
               borderRadius: "20px",
               width: { xs: "40%", md: "30%" },
+              "&:hover": {
+                background: "#ffff",
+              },
             }}
+            onClick={()=> navigate('/contact')}
           >
             Buy Now
           </Button>
